@@ -30,10 +30,10 @@ mkdir /exports/test
 gsutil cp gs://spet/spet_notebooks/QC_standalone_allegro/allegro_QC_StAlnEDF.zip /exports/test
 ```
 
-p.s. you need to mount the directory using gcsfuse and passing the .json file for the project, or simply visit the direct link to the storage bucket : 
+p.s. you need to mount the CS using gcsfuse and passing the .json file for the project, or simply visit the direct link to the storage bucket : 
 [GCS for nugen-production (internal access only)](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
--   (3) extract, and navgate to the dist directory 
+-   (3) extract, and navigate to the dist directory 
 
 ```
 unzip allegro_QC_StAlnEDF.zip
