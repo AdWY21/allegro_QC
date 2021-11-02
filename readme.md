@@ -2,7 +2,7 @@
 [GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
 
-Allegro QC aims at providing visualized stats on distance between target SNP and designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command.
+Allegro QC aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command.
 
 The compiled packages are distributed as a single exe file that can be used as described below to obtain stats as in issue: [#1479](https://github.com/tecangenomics/project-tracking/issues/1479)
 
