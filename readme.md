@@ -4,7 +4,7 @@
 
 Allegro QC aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command.
 
-The compiled packages are distributed as a single exe file that can be used as described below to obtain stats as in issue: [#1479](https://github.com/tecangenomics/project-tracking/issues/1479)
+The compiled packages are distributed as a single exe file that can be used as described below to obtain stats as in issue: [#1479 (internal Rep)](https://github.com/tecangenomics/project-tracking/issues/1479)
 
 
 ## Inputs: 
@@ -18,7 +18,7 @@ The compiled packages are distributed as a single exe file that can be used as d
 
 ## how to use: 
 
--   (1) tested on jupyter-gn.tecan.com/ - please mkdir with any name
+-   (1) tested on ubuntu server - please mkdir with any name
 
 ```
 mkdir /exports/test
@@ -31,7 +31,7 @@ gsutil cp gs://spet/spet_notebooks/QC_standalone_allegro/allegro_QC_StAlnEDF.zip
 ```
 
 p.s. you need to mount the directory using gcsfuse and passing the .json file for the project, or simply visit the direct link to the storage bucket : 
-[GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
+[GCS for nugen-production (internal access only)](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
 -   (3) extract, and navgate to the dist directory 
 
@@ -49,7 +49,7 @@ cd allegro_QC_bkend_ext/dist
 -   (5) the pass code is: 
 
 ```
-TTqcAllegro21
+./allegro_QC -requestPassCode
 ```
 
 ## output:
