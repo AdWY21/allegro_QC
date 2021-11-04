@@ -1,24 +1,24 @@
-## allegroQC (Distribution Package) -  How to install and how to use?
-[GCS for nugen-production (Internal use only)](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
+# allegroQC (Distribution package - Internal use only) - How to install and how to use?
+[GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
+SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes that should be not more than 40bp. This technology allows sequencing of target SNPs using single primers instead of paired long reads and this is the core of our allegro design. If we fail to design at this distance then our SPET technology basically is not working.
 
-Allegro QC aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command.
+Allegro QC aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command. This will immediately inform you if we deliver our SPET with each design or not, and will help in avoiding future issues, and should ease our communication with the customers.
 
-The compiled packages are distributed as a single exe file that can be used as described below to obtain stats as in issue: [#1479 (internal Rep)](https://github.com/tecangenomics/project-tracking/issues/1479)
-
+The compiled packages are distributed as single file that can be used as described below to obtain stats as in issue: [#1479](https://github.com/tecangenomics/project-tracking/issues/1479). The released package is designed to ensure its functioning on any system and should avoid any bugs during loading its dependencies.
 
 ## Inputs: 
 -   design ID (or name for your results directory files)
--   path/to/target.bed file (designed SNPs)
+-   path/to/target.bed file (target SNPs)
 -   path/to/probe.bed file (designed probes)
 
 ## Output: 
--   stats for probe coverage, dropouts, and summary for probe .. SNP destances e.g. 25% of probes had a distance of ?bp to probes, 50% had ?bp and 75% had ..  
--   exported hist plots (.pdf) for Forward and Reverse SPET for this design (visual stats)
+-   stats for probe coverage, dropouts, and summary for probe .. SNP destances i.e. percentiles e.g. 25% of probes had a distance of ?bp to target SNPs, 50% had ?bp and 75% had .. etc 
+-   exported histogram plots (.pdf) for SPE Forward and Reverse for the tested design (visual stats) - to quickly tell if the technology worked.
 
 ## how to use: 
 
--   (1) tested on ubuntu server - please mkdir with any name
+-   (1) tested on jupyter-gn.tecan.com/ - please mkdir with any name
 
 ```
 mkdir /exports/test
@@ -31,7 +31,13 @@ gsutil cp gs://spet/spet_notebooks/QC_standalone_allegro/allegro_QC_StAlnEDF.zip
 ```
 
 p.s. you need to mount the CS using gcsfuse and passing the .json file for the project, or simply visit the direct link to the storage bucket : 
-[GCS for nugen-production (internal access only)](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
+[GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
+
+```
+mkdir /mnt/rddata/spet/
+gcsfuse --key-file /pipeline/src/nugen-production-5d3e91f431f0.json --implicit-dirs --dir-mode=777 --file-mode=777 spet /mnt/rddata/spet
+```
+
 
 -   (3) extract, and navigate to the dist directory 
 
@@ -49,7 +55,7 @@ cd allegro_QC_bkend_ext/dist
 -   (5) the pass code is: 
 
 ```
-./allegro_QC -requestPassCode
+./allegro_QC –requestPassCode
 ```
 
 ## output:
@@ -77,4 +83,3 @@ cd allegro_QC_bkend_ext/dist
 ## reach-out to me:
 
 -   this application was developed by Dr. Waly Adwy - https://www.linkedin.com/in/adwy/
-
