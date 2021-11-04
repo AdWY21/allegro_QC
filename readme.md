@@ -1,5 +1,5 @@
-## allegroQC (Distribution package - Internal use only) 
-## - How to install and how to use?
+## allegroQC  - How to install and how to use?
+### (Distribution package - Internal use only)
 [GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
 SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes that should be not more than 40bp. This technology allows sequencing of target SNPs using single primers instead of paired long reads and this is the core of our allegro design. If we fail to design at this distance then our SPET technology basically is not working.
