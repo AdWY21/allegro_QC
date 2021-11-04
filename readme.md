@@ -2,7 +2,7 @@
 ### (Distribution package - Internal use only)
 [GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
-SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes. This technology allows sequencing of target SNPs using single primers instead of paired long reads and this is the core of our allegro design. Moreover it allows a chemistry for short read sequencing for accurate SNP detection. By this the allegro promise for accurate SNP detection with high coverage and much lower costs.
+SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes. This technology allows sequencing of target SNPs using single primers instead of paired long reads. Moreover it allows a chemistry for short read sequencing for accurate SNP detection. By this the allegro promises for accurate SNP detection with high coverage at much lower costs.
 
 AllegroQC (this package) aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command. This will immediately inform you if we deliver our SPE-technology with each design or not, and will help in ganing confidence and choosing the right chemistry for the sequencing reaction.
 
