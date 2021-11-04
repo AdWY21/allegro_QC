@@ -2,11 +2,11 @@
 ### (Distribution package - Internal use only)
 [GCS for nugen-production/spet/spet_notebooks/QC_standalone_allegro](https://console.cloud.google.com/storage/browser/spet/spet_notebooks/QC_standalone_allegro?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&project=nugen-production&prefix=&forceOnObjectsSortingFiltering=false)
 
-SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes that should be not more than 40bp. This technology allows sequencing of target SNPs using single primers instead of paired long reads and this is the core of our allegro design. If we fail to design at this distance then our SPET technology basically is not working.
+SPET: Single primer enrichment technology depends on the distance between the target SNP and the designed probes. This technology allows sequencing of target SNPs using single primers instead of paired long reads and this is the core of our allegro design. Moreover it allows a chemistry for short read sequencing for accurate SNP detection. By this the allegro promise for accurate SNP detection with high coverage and much lower costs.
 
-Allegro QC aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command. This will immediately inform you if we deliver our SPET with each design or not, and will help in avoiding future issues, and should ease our communication with the customers.
+AllegroQC (this package) aims at providing visualized stats on distances calculations between target SNP and SPET designed probes. A quick overview on how correct a design was built can be obtained visually and numerically using a single command. This will immediately inform you if we deliver our SPE-technology with each design or not, and will help in ganing confidence and choosing the right chemistry for the sequencing reaction.
 
-The compiled packages are distributed as single file that can be used as described below to obtain stats as in issue: [#1479](https://github.com/tecangenomics/project-tracking/issues/1479). The released package is designed to ensure its functioning on any system and should avoid any bugs during loading its dependencies.
+The compiled packages are distributed as single file that can be used as described below to obtain stats. The released package is designed to ensure its functioning on any linux system and should avoid any bugs during loading its dependencies.
 
 ## Inputs: 
 -   design ID (or name for your results directory files)
@@ -19,7 +19,7 @@ The compiled packages are distributed as single file that can be used as describ
 
 ## how to use: 
 
--   (1) tested on jupyter-gn.tecan.com/ - please mkdir with any name
+-   (1) tested on internal Ubuntu server : jupyter-gn.tecan.com/ - please mkdir with any name
 
 ```
 mkdir /exports/test
