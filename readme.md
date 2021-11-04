@@ -14,7 +14,7 @@ The compiled packages are distributed as single file that can be used as describ
 -   path/to/probe.bed file (designed probes)
 
 ## Output: 
--   stats for probe coverage, dropouts, and summary for probe .. SNP destances i.e. percentiles e.g. 25% of probes had a distance of ?bp to target SNPs, 50% had ?bp and 75% had .. etc 
+-   stats for probe coverage, dropouts, and summary for probe .. SNP distances i.e. percentiles e.g. 25% of probes had a distance of ?bp to target SNPs, 50% had ?bp and 75% had .. etc 
 -   exported histogram plots (.pdf) for SPE Forward and Reverse for the tested design (visual stats) - to quickly tell if the technology worked.
 
 ## how to use: 
