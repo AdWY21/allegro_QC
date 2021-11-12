@@ -80,6 +80,22 @@ cd allegro_QC_bkend_ext/dist
 
 - Testing directory (T2) has the files for issue [#1479](https://github.com/tecangenomics/project-tracking/issues/1479)
 
+# Single command Version:
+
+This is another dist version that allows a single command - use the following script to download and run after creating and updating the probes set
+
+```
+Design_ID='ST5277G_1'
+gsutil cp gs://spet/spet_notebooks/QC_standalone_allegro/spetQC.zip /exports/$Design_ID
+cd /exports/$Design_ID
+unzip spetQC.zip
+rm -r spetQC.zip
+cd spetQC/dist
+cp -r /mnt/rddata/spet/probesets/$Design_ID/target_$Design_ID_*.bed $PWD
+cp -r /mnt/rddata/spet/probesets/$Design_ID/probe_$Design_ID_*.bed $PWD
+./allegro_QC -start -qcPass $Design_ID target_$Design_ID_*.bed probe_$Design_ID_*.bed
+```
+
 
 ## reach-out to me:
 
