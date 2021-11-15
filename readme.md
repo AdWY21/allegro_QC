@@ -90,8 +90,8 @@ gsutil cp gs://spet/spet_notebooks/QC_standalone_allegro/spetQC.zip /exports/$De
 cd /exports/$Design_ID
 unzip spetQC.zip
 cd spetQC/dist
-cp -r /mnt/rddata/spet/probesets/$Design_ID/target_$Design_ID_*.bed $PWD
-cp -r /mnt/rddata/spet/probesets/$Design_ID/probe_$Design_ID_*.bed $PWD
+cp /mnt/rddata/spet/probesets/$Design_ID/target_$Design_ID_*.bed $PWD
+cp /mnt/rddata/spet/probesets/$Design_ID/probe_$Design_ID_*.bed $PWD
 ./allegro_QC -start -qcPass $Design_ID target_$Design_ID_*.bed probe_$Design_ID_*.bed
 ```
 
