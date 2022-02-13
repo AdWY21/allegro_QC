@@ -1,1 +1,2 @@
 build/allegro_QC/PKG-00.pkg filter=lfs diff=lfs merge=lfs -text
+dist/allegro_QC filter=lfs diff=lfs merge=lfs -text
